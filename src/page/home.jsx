@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { searchDogByName } from "../api/Dogapi.jsx";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [keyword, setKeyword] = useState("");
   const [dog, setDog] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -73,7 +75,7 @@ const Home = () => {
           {!loading && dog && (
             <div className="dog-info">
               <img
-                src={`http://localhost:3000/images/${dog.image}`}
+                src={`http://localhost:3000${dog.image}`}
                 alt={dog.name}
                 className="dog-img"
               />
@@ -81,14 +83,20 @@ const Home = () => {
               {dog.origin && (
                 <p><b>Origin:</b> {dog.origin}</p>
               )}
-
               {dog.temperament && (
-                <p><b>Temperament:</b> {dog.temperament}</p>
+                <p><b>Temperament:</b> {dog.temperament.join(",")} </p>
               )}
-
               {dog.life_span && (
                 <p><b>Life span:</b> {dog.life_span}</p>
               )}
+              <div className="btn-wrapper" style={{display:'flex', justifyContent:'flex-end'}}>
+                <button 
+                  className="more-info-btn"
+                  onClick={() => navigate(`/Information/${dog._id}`)}
+                >
+                  More Information
+                </button>
+              </div>
             </div>
           )}
         </div>
