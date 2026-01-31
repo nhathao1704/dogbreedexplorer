@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react"; // Sử dụng useState để quản lý trạng thái
+import { useNavigate } from "react-router-dom";// Sử dụng useNavigate để điều hướng được dùng tại className="more-info-btn"
 import { searchDogByName } from "../api/Dogapi.jsx";
 
 const Home = () => {

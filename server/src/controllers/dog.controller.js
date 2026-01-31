@@ -1,6 +1,5 @@
 import Dog from "../models/Dog.js";
-
-export const getAllDogs = async (req, res) => {
+export const getAllDogs = async (req, res) => { //lay du lieu tat ca cac con cho
   try {
     const dogs = await Dog.find();
     res.json(dogs);
@@ -10,7 +9,7 @@ export const getAllDogs = async (req, res) => {
 };
 
 
-export const searchDogs = async (req, res) => {
+export const searchDogs = async (req, res) => { //tim kiem theo ten
   try {
     const { q } = req.query;
 
@@ -25,7 +24,7 @@ export const searchDogs = async (req, res) => {
 };
 
 
-export const getDogById = async (req, res) => {
+export const getDogById = async (req, res) => { //lay du lieu con cho theo id
   try {
     const dog = await Dog.findById(req.params.id);
 
