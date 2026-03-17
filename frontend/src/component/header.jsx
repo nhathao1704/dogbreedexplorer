@@ -22,11 +22,9 @@ const Header = () => {
               <input placeholder="Find Your Favourite Pet Here" />
               <button>🔍</button>
             </div>
-
-            <ul className="sign-in">
+           <ul className="sign-in">
               <li><Link to="/login">Đăng nhập</Link></li>
-              <li><Link to="/cart">Giỏ hàng</Link></li>
-            </ul>
+            </ul>  
         </div>
       </nav>
     </header>

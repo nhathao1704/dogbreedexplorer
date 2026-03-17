@@ -8,7 +8,6 @@ export const getAllDogs = async (req, res) => { //lay du lieu tat ca cac con cho
   }
 };
 
-
 export const searchDogs = async (req, res) => { //tim kiem theo ten
   try {
     const { q } = req.query;
