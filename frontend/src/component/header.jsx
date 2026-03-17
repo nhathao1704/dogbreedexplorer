@@ -16,6 +16,9 @@ const Header = () => {
           <li>
             <Link to="/aboutus">About us</Link>
           </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
         </ul>
         <div className="header-right">
             <div className="search-box1">

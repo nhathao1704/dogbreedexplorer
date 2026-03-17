@@ -4,6 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./config/connectionDB.js";
 import dogRoutes from "./Routes/dog.routes.js";
+import authroutes from "./Routes/auth.routes.js";
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ connectDB();
 
 // routes
 app.use("/api/dogs", dogRoutes);
+app.use("/api/auth", authroutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

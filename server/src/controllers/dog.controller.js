@@ -1,4 +1,4 @@
-import Dog from "../models/Dog.js";
+import Dog from "../models/dog.models.js";
 export const getAllDogs = async (req, res) => { //lay du lieu tat ca cac con cho
   try {
     const dogs = await Dog.find();
