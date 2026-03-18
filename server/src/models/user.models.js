@@ -16,6 +16,12 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    favorites: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Dog",
+      },
+    ],
   },
   {
     collection: "user",
